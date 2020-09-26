@@ -1,15 +1,15 @@
 {
     "target_overrides": {
         "*": {
+            "target.printf_lib": "std", 
             "platform.stdio-baud-rate": 115200,
             "platform.stdio-convert-newlines": true, 
             "lwip.socket-max": 8,
-            "lwip.tcp-socket-max": 8                  
+            "lwip.tcp-socket-max": 8,
+            "lwip.tcpip-thread-stacksize" : 4096
         },
         "DEVEBOX_F407VG": {
-            "mbed-trace.enable": "1",
-            "stm32-emac.eth-phy-address" : 1,
-            "stm32-emac.eth-phy-AutoNegotiation" : "ETH_AUTONEGOTIATION_ENABLE"        
+            "stm32-emac.eth-phy-address" : 1
         }
     }
 }
